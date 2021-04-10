@@ -33,6 +33,7 @@ const bgrColor = {
       return;
     }
 
+    bttn.StartRef.setAttribute('disabled', true);
     this.isActive = true;
 
     this.intervalId = setInterval(() => {
@@ -45,5 +46,6 @@ const bgrColor = {
   stop() {
     this.isActive = false;
     clearInterval(this.intervalId);
+    bttn.StartRef.removeAttribute('disabled');
   },
 };
